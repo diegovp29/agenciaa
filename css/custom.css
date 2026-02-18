@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* Variables de cor personalizadas */
+    /* --bs-primary: #ffcc00;
+    --bs-secondary: #6c757d; */
+    --bs-link-color: #ffcc00;
+    --bs-link-hover-color: #cca000;
+    
+
+    /* Cores RGB para opacidade */
+    --bs-primary-rgb: 255, 200, 0;
+    --bs-secondary-rgb: 108, 117, 125;
+
+    /* Fonte personalizada */
+    --bs-font-sans-serif: "Inter", sans-serif;
+    --secondary-font: "Montserrat", sans-serif;
+    
+    --white: #fff;
+    --black: #000;
+}
+
+body {
+    font-family: var(--bs-font-sans-serif);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+h2 {
+    font-family: var(--secondary-font);
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.btn {
+  border: none;
+  outline: none;
+}
+
+/* 2. personalizar navegacion */
+
+#mainNav {
+    background: transparent;
+    transition: padding-top 0.3s ease-in-out padding-bottom 0.3s ease-in-out;
+}
+
+#mainNav .navbar-brand {
+    transition: font-size 0.3s ease-in-out;
+}
+
+/* efecto de estreitamento ao facer scroll */
+#mainNav.navbar-shrink {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: #212529;
+}
+
+#mainNav.navbar-shrink .navbar-brand {
+    font-size: 1.25rem;
+}
+
+
+
+.navbar-toggler, .navbar-toggler[type="button"]:not(:disabled) {
+    border: none;
+    outline: none;
+}
+
+/* 3. personalizar seccions */
+.page-section {
+    padding-top: 8rem;
+}
+
+.section-heading {
+  padding: 1rem;
+}
+
+.section-subheading {
+  padding-bottom: 4rem;
+}
+
+/* 4. personalizar header */
+
+header.masthead {
+    padding-top: 10.5rem;
+    padding-bottom: 6rem;
+
+    background-image: url(../img/header-bg.jpg);
+    background-repeat: no-repeat;
+
+    background-position: center center;
+    background-size: cover;
+}
+
+.masthead {
+    text-align: center;
+}
+
+.masthead-heading {
+    font-size: 3.25rem;
+    color: var(--white);
+    font-family: var(--secondary-font);
+    margin-bottom: 3rem;
+}
+
+.masthead-subheading {
+    font-size: 1.25rem;
+    color: var(--white);
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+/* 5. Sección Portfolio */
+#portfolio .portfolio-item {
+    max-width: 26rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(254, 200, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity ease-in-out 0.25s;
+}
+
+#portfolio
+    .portfolio-item
+    .portfolio-link
+    .portfolio-hover
+    .portfolio-hover-content {
+    font-size: 1.25rem;
+    color: white;
+}
+
+#portfolio .portfolio-item .portfolio-link:hover .portfolio-hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-caption {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
+    font-size: 1.5rem;
+    font-family:
+        "Montserrat",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+#portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
+    font-style: italic;
+    font-family:
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+/* 6. Modais de Portfolio */
+.portfolio-modal .modal-dialog {
+    margin: 1rem;
+    max-width: 100vw;
+}
+
+.portfolio-modal .modal-content {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    text-align: center;
+}
+
+.portfolio-modal .modal-content h2,
+.portfolio-modal .modal-content .h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.portfolio-modal .modal-content p.item-intro {
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-family:
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+.portfolio-modal .modal-content p {
+    margin-bottom: 2rem;
+}
+
+.portfolio-modal .modal-content ul.list-inline {
+    margin-bottom: 2rem;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 2rem;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: 0.3;
+}
+
+/* 7. Timeline (Sección About) */
+.timeline {
+    position: relative;
+    padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 2px;
+    margin-left: -1.5px;
+    content: "";
+    background-color: #e9ecef;
+}
+
+.timeline > li {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 50px;
+}
+
+.timeline > li:after,
+.timeline > li:before {
+    display: table;
+    content: " ";
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+.timeline > li .timeline-panel {
+    position: relative;
+    float: right;
+    width: 100%;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+.timeline > li .timeline-image {
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
+    text-align: center;
+    color: white;
+    border: 7px solid #e9ecef;
+    border-radius: 100%;
+    background-color: #ffc800;
+}
+
+.timeline > li .timeline-image h4 {
+    font-size: 10px;
+    line-height: 14px;
+    margin-top: 12px;
+    font-family:
+        "Montserrat",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+/* .timeline > li.timeline-inverted > li .timeline-panel { */
+.timeline > li.timeline-inverted .timeline-panel {
+    float: right;
+    padding: 0 20px 0 100px;
+    text-align: left;
+}
+
+/* .timeline > li.timeline-inverted > li .timeline-panel { */
+.timeline > li.timeline-inverted .timeline-panel {
+    left: auto;
+    right: 0;
+}
+
+.timeline > li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: inherit;
+    font-weight: 600;
+    font-family:
+        "Montserrat",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+.timeline .timeline-heading h5.subheading {
+    text-transform: none;
+    font-family:
+        "Inter",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+
+.timeline .timeline-body > ul,
+.timeline .timeline-body > p {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .timeline:before {
+        left: 50%;
+    }
+
+    .timeline > li {
+        min-height: 100px;
+        margin-bottom: 100px;
+    }
+
+    .timeline > li .timeline-panel {
+        float: left;
+        width: 41%;
+        padding: 0 20px 20px 30px;
+        text-align: right;
+    }
+
+    .timeline > li .timeline-image {
+        left: 50%;
+        width: 100px;
+        height: 100px;
+        margin-left: -50px;
+    }
+
+    .timeline > li .timeline-image h4 {
+        font-size: 13px;
+        line-height: 18px;
+        margin-top: 16px;
+    }
+
+    /* .timeline > li.timeline-inverted > li .timeline-panel { */
+    .timeline > li.timeline-inverted .timeline-panel {
+        float: right;
+        padding: 0 30px 20px 20px;
+        text-align: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .timeline > li {
+        min-height: 150px;
+    }
+
+    .timeline > li .timeline-panel {
+        padding: 0 20px 20px;
+    }
+
+    .timeline > li .timeline-image {
+        width: 150px;
+        height: 150px;
+        margin-left: -75px;
+    }
+
+    .timeline > li .timeline-image h4 {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 30px;
+    }
+
+    /* .timeline > li.timeline-inverted > li .timeline-panel { */
+    .timeline > li.timeline-inverted .timeline-panel {
+        padding: 0 20px 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .timeline > li {
+        min-height: 170px;
+    }
+
+    .timeline > li .timeline-panel {
+        padding: 0 20px 20px 100px;
+    }
+
+    .timeline > li .timeline-image {
+        width: 170px;
+        height: 170px;
+        margin-left: -85px;
+    }
+
+    .timeline > li .timeline-image h4 {
+        font-size: 20px;
+        line-height: 26px;
+        margin-top: 30px;
+    }
+
+    /* .timeline > li.timeline-inverted > li .timeline-panel { */
+    .timeline > li.timeline-inverted .timeline-panel {
+        padding: 0 100px 20px 20px;
+    }
+}
+
+/* 8. equipo */
+.team-member {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    & img {
+        width: 14rem;
+        height: 14rem;
+        border: 0.5rem solid rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* 9. contacto */
+#contacto {
+  background-color: #212529;
+  background-image: url(../img/map-image.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-bottom: 5rem;
+
+  & .section-heading, .section-subheading {
+    color :var(--white)
+  }
+}
+
+.form-group-textarea {
+  height: 100%;
+}
+
+.form-group-textarea textarea {
+  height: calc(100% -16px);
+  min-height: 145px;
+  resize: none;
+}
